@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+    <data>
+         <record id="pos_order_form_inherit" model="ir.ui.view">
+            <field name="name">pos.order.form.inherit</field>
+		    <field name="model">pos.order</field>
+		    <field name="inherit_id" ref="point_of_sale.view_pos_pos_form" />
+		    <field name="arch" type="xml">
+				<xpath expr="//field[@name='partner_id']" position="after">
+		    		 <field name="revel_pos_id" readonly="True" />
+                     <field name="user_id" context="{'default_groups_ref': ['base.group_user', 'base.group_partner_manager', 'point_of_sale.group_pos_user']}"/>
+                     <field name="shift" />           
+		    		 <field name="location" />		    		 
+				</xpath>
+                <xpath expr="//tree[@string='Order lines']/field[@name='price_subtotal']" position="attributes">
+		    		 <attribute name="invisible">1</attribute>
+				</xpath>
+                <xpath expr="//tree[@string='Order lines']/field[@name='price_subtotal']" position="after">
+                     <field name="applied_taxes" />
+		    		 <field name="price_tax" />
+				</xpath>
+                <xpath expr="//tree[@string='Order lines']/field[@name='price_subtotal_incl']" position="after">
+                     <field name="voided" />
+				</xpath>
+                <xpath expr="//group[@string='General Information']/field[@name='user_id']" position="replace">
+				</xpath>
+		    </field>
+        </record>  
+        
+        <record id="pos_order_tree_inherit" model="ir.ui.view">
+            <field name="name">pos.order.tree.inherit</field>
+		    <field name="model">pos.order</field>
+		    <field name="inherit_id" ref="point_of_sale.view_pos_order_tree" />
+		    <field name="arch" type="xml">
+                <field name="pos_reference" position="attributes">
+                    <attribute name="invisible">1</attribute>
+                </field>
+                <field name="pos_reference" position="after">
+                    <field name="revel_pos_id" />
+                </field>
+            </field>
+        </record> 
+    </data>
+</openerp>

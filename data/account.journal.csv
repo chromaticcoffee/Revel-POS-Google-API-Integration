@@ -1,0 +1,16 @@
+id,name,code,type,company_id/id,default_credit_account_id/id,default_debit_account_id/id,user_id/id,with_last_closing_balance,cash_control,journal_user,revel_payment_id
+revel_integration.account_journal_other,Other,OTHER,bank,base.main_company,account.cqf_account_bank,account.cqf_account_bank,base.user_root,FALSE,FALSE,TRUE,0
+revel_integration.account_journal_cash,Cash,CASH,cash,base.main_company,account.cqf_account_cash,account.cqf_account_cash,base.user_root,FALSE,TRUE,TRUE,1
+revel_integration.account_journal_credit,Credit,CREDIT,bank,base.main_company,account.cqf_account_bank,account.cqf_account_bank,base.user_root,FALSE,FALSE,TRUE,2
+revel_integration.account_journal_check,Check,CHECK,bank,base.main_company,account.cqf_account_bank,account.cqf_account_bank,base.user_root,FALSE,FALSE,TRUE,3
+revel_integration.account_journal_gift,Gift Card,GIFT,bank,base.main_company,account.cqf_account_bank,account.cqf_account_bank,base.user_root,FALSE,FALSE,TRUE,4
+revel_integration.account_journal_creditmanual,Credit Manual,CDMANUAL,bank,base.main_company,account.cqf_account_bank,account.cqf_account_bank,base.user_root,FALSE,FALSE,TRUE,5
+revel_integration.account_journal_creditplus,Credit Plus,CDPLUS,bank,base.main_company,account.cqf_account_bank,account.cqf_account_bank,base.user_root,FALSE,FALSE,TRUE,6
+revel_integration.account_journal_externallevelup,External LevelUp,EXTERNALLEVELUP,bank,base.main_company,account.cqf_account_bank,account.cqf_account_bank,base.user_root,FALSE,FALSE,TRUE,7
+revel_integration.account_journal_debit,Debit,DEBIT,bank,base.main_company,account.cqf_account_bank,account.cqf_account_bank,base.user_root,FALSE,FALSE,TRUE,8
+revel_integration.account_journal_badge,Badge,BADGE,bank,base.main_company,account.cqf_account_bank,account.cqf_account_bank,base.user_root,FALSE,FALSE,TRUE,9
+revel_integration.account_journal_index,Index,INDEX,bank,base.main_company,account.cqf_account_bank,account.cqf_account_bank,base.user_root,FALSE,FALSE,TRUE,10
+revel_integration.account_journal_paypal,Paypal,PAYPAL,bank,base.main_company,account.cqf_account_bank,account.cqf_account_bank,base.user_root,FALSE,FALSE,TRUE,11
+revel_integration.account_journal_ebt_foodstamp,EBT Food Stamp,EBT_FOODSTAMP,bank,base.main_company,account.cqf_account_bank,account.cqf_account_bank,base.user_root,FALSE,FALSE,TRUE,12
+revel_integration.account_journal_ebt_cash,EBT Cash,EBT_CASH,bank,base.main_company,account.cqf_account_bank,account.cqf_account_bank,base.user_root,FALSE,FALSE,TRUE,14
+revel_integration.account_journal_deposit,Deposit,DEPOSIT,bank,base.main_company,account.cqf_account_bank,account.cqf_account_bank,base.user_root,FALSE,FALSE,TRUE,102

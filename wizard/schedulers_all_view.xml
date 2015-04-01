@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+    <data>
+
+        <!--  Run Schedulers -->
+
+        <record id="view_sync_schedulers_wizard" model="ir.ui.view">
+            <field name="name">Run Schedulers</field>
+            <field name="model">revelpos.sync</field>
+            <field name="arch" type="xml">
+                <form string="Scheduler Parameters">
+                    <p>
+                        Syncronize order data from Revel POS and Google Calendar in the background.
+                    </p>
+                    <p>
+                        <field name="date" />
+                    </p>
+                    <footer>
+                        <button name="get_data_from_apis" string="Run Schedulers" type="object"  class="oe_highlight"  />
+                        or
+                        <button string="Cancel" class="oe_link" special="cancel" />
+                    </footer>
+                </form>
+            </field>
+        </record>
+
+         <act_window name="Run Schedulers"
+            res_model="revelpos.sync"
+            view_mode="form"
+            target="new"
+            id="action_sync_revelpos"/>
+        <!--
+        <menuitem name="Run Schedulers" id="menu_sync_revelpos"
+            parent="point_of_sale.menu_point_config_product"
+            action="action_sync_revelpos" sequence="6" />
+        -->
+    </data>
+</openerp>
